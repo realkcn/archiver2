@@ -1,21 +1,16 @@
 package cn.kcn.archiver.model;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 /**
  * Created by kcn on 14-6-17.
  */
 
-@Document
-public class Board {
+//@Document
+public class Board<IDClass> {
 
-    @Id
-    private ObjectId boardid;
+//    @Id
+    private IDClass boardid;
 
-    @Indexed(unique = true)
+//    @Indexed(unique = true)
     private String name;
 
     private int threads;
@@ -44,7 +39,7 @@ public class Board {
         clone(template);
     }
 
-    public void clone(Board template) {
+    public void clone(Board<IDClass> template) {
         boardid = template.boardid;
         name = template.name;
         threads = template.threads;
@@ -58,11 +53,11 @@ public class Board {
         lastdeleteid = template.lastdeleteid;
     }
 
-    public ObjectId getBoardid() {
+    public IDClass getBoardid() {
         return boardid;
     }
 
-    public void setBoardid(ObjectId boardid) {
+    public void setBoardid(IDClass boardid) {
         this.boardid = boardid;
     }
 

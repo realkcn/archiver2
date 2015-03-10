@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.kcn</groupId>
-    <artifactId>archiver.commons</artifactId>
+    <artifactId>archiver-commons</artifactId>
     <version>2.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>NewSMTH Archiver Common Package</name>
@@ -22,10 +22,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-        </dependency>
-        <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
         </dependency>
@@ -36,11 +32,14 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.3.2</version>
         </dependency>
         <dependency>
             <groupId>org.opensymphony.quartz</groupId>
             <artifactId>quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
         </dependency>
     </dependencies>
 </project>

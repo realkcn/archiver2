@@ -1,12 +1,5 @@
 package cn.kcn.archiver.model;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.CompoundIndex;
-import org.springframework.data.mongodb.core.index.CompoundIndexes;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,14 +7,14 @@ import java.util.List;
 /**
  * Created by kcn on 14-6-17.
  */
-@Document
-@CompoundIndexes({
-        @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
-})
-public class Thread {
-    @Id
-    private ObjectId threadid;
-    private ObjectId boardid;
+//@Document
+//@CompoundIndexes({
+//        @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
+//})
+public class Thread<IDClass> {
+//    @Id
+    private IDClass threadid;
+    private IDClass boardid;
     private String subject;
     private Date posttime;
     private String author;
@@ -30,7 +23,7 @@ public class Thread {
     private String encodingurl;
     private boolean isvisible = true;
 
-    @DBRef(lazy = true)
+//    @DBRef(lazy = true)
     List<Article> articles=new ArrayList<>();
 
     public List<Article> getArticles() {
@@ -53,7 +46,7 @@ public class Thread {
         return boardid.toString();
     }
 
-    public void setBoardid(ObjectId boardid) {
+    public void setBoardid(IDClass boardid) {
         this.boardid = boardid;
     }
 
@@ -97,11 +90,11 @@ public class Thread {
         this.lastposttime = lastposttime;
     }
 
-    public ObjectId getThreadid() {
+    public IDClass getThreadid() {
         return threadid;
     }
 
-    public void setThreadid(ObjectId threadid) {
+    public void setThreadid(IDClass threadid) {
         this.threadid = threadid;
     }
 

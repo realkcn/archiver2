@@ -1,8 +1,6 @@
 package cn.kcn.archiver.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
+//@Document
 public class Attachment {
     private String attachmentid;
     private String name;

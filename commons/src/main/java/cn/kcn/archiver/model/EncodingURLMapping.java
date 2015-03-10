@@ -1,22 +1,18 @@
 package cn.kcn.archiver.model;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 /**
  * Created by kcn on 14-8-23.
  */
 
 @SuppressWarnings("UnusedDeclaration")
-@Document
-public class EncodingURLMapping {
-    @Id
+//@Document
+public class EncodingURLMapping<IDClass> {
+//    @Id
     private String EncodingURL;
 
     private String mappingid;
 
-    public EncodingURLMapping(Type type,String encodingURL,ObjectId newid) {
+    public EncodingURLMapping(Type type,String encodingURL,IDClass newid) {
         setEncodingURL(convertToId(type,encodingURL));
         setMappingid(newid.toString());
     }

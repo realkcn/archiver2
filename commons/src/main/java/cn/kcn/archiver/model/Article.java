@@ -1,9 +1,5 @@
 package cn.kcn.archiver.model;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,14 +7,14 @@ import java.util.List;
 /**
  * Created by kcn on 14-6-17.
  */
-@Document
-public class Article {
-    @Id
-    private ObjectId articleid;
+//@Document
+public class Article<IDClass> {
+//    @Id
+    private IDClass articleid;
 
-    private ObjectId boardid;
+    private IDClass boardid;
 
-    private ObjectId threadid;
+    private IDClass threadid;
 
     private String author;
 
@@ -32,27 +28,27 @@ public class Article {
 
     private String body;
 
-    public ObjectId getBoardid() {
+    public IDClass getBoardid() {
         return boardid;
     }
 
-    public void setBoardid(ObjectId boardid) {
+    public void setBoardid(IDClass boardid) {
         this.boardid = boardid;
     }
 
-    public ObjectId getThreadid() {
+    public IDClass getThreadid() {
         return threadid;
     }
 
-    public void setThreadid(ObjectId threadid) {
+    public void setThreadid(IDClass threadid) {
         this.threadid = threadid;
     }
 
-    public ObjectId getArticleid() {
+    public IDClass getArticleid() {
         return articleid;
     }
 
-    public void setArticleid(ObjectId articleid) {
+    public void setArticleid(IDClass articleid) {
         this.articleid = articleid;
     }
 
