@@ -35,7 +35,7 @@ public class Board<IDClass> {
 
     }
 
-    public Board(Board template) {
+    public Board(Board<IDClass> template) {
         clone(template);
     }
 
