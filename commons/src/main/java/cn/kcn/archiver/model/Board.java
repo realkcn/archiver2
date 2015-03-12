@@ -5,10 +5,10 @@ package cn.kcn.archiver.model;
  */
 
 //@Document
-public class Board<IDClass> {
+public class Board {
 
 //    @Id
-    private IDClass boardid;
+    private long boardid;
 
 //    @Indexed(unique = true)
     private String name;
@@ -35,11 +35,11 @@ public class Board<IDClass> {
 
     }
 
-    public Board(Board<IDClass> template) {
+    public Board(Board template) {
         clone(template);
     }
 
-    public void clone(Board<IDClass> template) {
+    public void clone(Board template) {
         boardid = template.boardid;
         name = template.name;
         threads = template.threads;
@@ -53,11 +53,11 @@ public class Board<IDClass> {
         lastdeleteid = template.lastdeleteid;
     }
 
-    public IDClass getBoardid() {
+    public long getBoardid() {
         return boardid;
     }
 
-    public void setBoardid(IDClass boardid) {
+    public void setBoardid(long boardid) {
         this.boardid = boardid;
     }
 

@@ -11,10 +11,10 @@ import java.util.List;
 //@CompoundIndexes({
 //        @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
 //})
-public class Thread<IDClass> {
+public class Thread {
 //    @Id
-    private IDClass threadid;
-    private IDClass boardid;
+    private long threadid;
+    private long boardid;
     private String subject;
     private Date posttime;
     private String author;
@@ -42,11 +42,11 @@ public class Thread<IDClass> {
         this.articles.remove(articleid);
     }
 
-    public String getBoardid() {
-        return boardid.toString();
+    public long getBoardid() {
+        return boardid;
     }
 
-    public void setBoardid(IDClass boardid) {
+    public void setBoardid(long boardid) {
         this.boardid = boardid;
     }
 
@@ -90,11 +90,11 @@ public class Thread<IDClass> {
         this.lastposttime = lastposttime;
     }
 
-    public IDClass getThreadid() {
+    public long getThreadid() {
         return threadid;
     }
 
-    public void setThreadid(IDClass threadid) {
+    public void setThreadid(long threadid) {
         this.threadid = threadid;
     }
 

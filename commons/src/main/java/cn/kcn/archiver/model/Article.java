@@ -8,13 +8,13 @@ import java.util.List;
  * Created by kcn on 14-6-17.
  */
 //@Document
-public class Article<IDClass> {
+public class Article {
 //    @Id
-    private IDClass articleid;
+    private long articleid;
 
-    private IDClass boardid;
+    private long boardid;
 
-    private IDClass threadid;
+    private long threadid;
 
     private String author;
 
@@ -28,27 +28,27 @@ public class Article<IDClass> {
 
     private String body;
 
-    public IDClass getBoardid() {
+    public long getBoardid() {
         return boardid;
     }
 
-    public void setBoardid(IDClass boardid) {
+    public void setBoardid(long boardid) {
         this.boardid = boardid;
     }
 
-    public IDClass getThreadid() {
+    public long getThreadid() {
         return threadid;
     }
 
-    public void setThreadid(IDClass threadid) {
+    public void setThreadid(long threadid) {
         this.threadid = threadid;
     }
 
-    public IDClass getArticleid() {
+    public long getArticleid() {
         return articleid;
     }
 
-    public void setArticleid(IDClass articleid) {
+    public void setArticleid(long articleid) {
         this.articleid = articleid;
     }
 

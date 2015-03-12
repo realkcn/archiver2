@@ -7,6 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("UnusedDeclaration")
-public class ArticleDao {
-    private static final Logger LOG = LoggerFactory.getLogger(ArticleDao.class);
+public interface ArticleDao {
+//    public
 }
