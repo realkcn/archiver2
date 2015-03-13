@@ -5,9 +5,7 @@ package cn.kcn.archiver.model;
  */
 
 @SuppressWarnings("UnusedDeclaration")
-//@Document
 public class EncodingURLMapping {
-//    @Id
     private String EncodingURL;
 
     private String mappingid;
