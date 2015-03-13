@@ -6,15 +6,15 @@ package cn.kcn.archiver.model;
 
 @SuppressWarnings("UnusedDeclaration")
 //@Document
-public class EncodingURLMapping<IDClass> {
+public class EncodingURLMapping {
 //    @Id
     private String EncodingURL;
 
     private String mappingid;
 
-    public EncodingURLMapping(Type type,String encodingURL,IDClass newid) {
+    public EncodingURLMapping(Type type,String encodingURL,long newid) {
         setEncodingURL(convertToId(type,encodingURL));
-        setMappingid(newid.toString());
+        setMappingid(Long.toString(newid));
     }
 
     public EncodingURLMapping(Type type,String encodingURL,String newid) {
