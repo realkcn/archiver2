@@ -21,12 +21,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.springframework.version>4.1.5.RELEASE</org.springframework.version>
         <org.mybatis.version>3.2.8</org.mybatis.version>
+        <junit.version>4.12</junit.version>
         <org.mybatis.spring.version>1.2.2</org.mybatis.spring.version>
         <org.slf4j.version>1.7.10</org.slf4j.version>
         <ehcache.version>2.9.1</ehcache.version>
         <logback.version>1.1.2</logback.version>
         <mongo.version>2.12.3</mongo.version>
         <quartz.version>1.6.5</quartz.version>
+        <mysql.driver.version>5.1.31</mysql.driver.version>
         <urlrewritefilter.version>4.0.4</urlrewritefilter.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -54,6 +56,11 @@
             <!--<version>3.2.1</version>-->
             <!--</dependency>-->
             <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>0.9.1.2</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.3.2</version>
@@ -62,6 +69,16 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${org.mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>3.6.3</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -140,7 +157,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
