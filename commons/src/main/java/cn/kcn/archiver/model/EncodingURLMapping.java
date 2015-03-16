@@ -10,13 +10,13 @@ public class EncodingURLMapping {
 
     private String mappingid;
 
-    public EncodingURLMapping(Type type,String encodingURL,long newid) {
-        setEncodingURL(convertToId(type,encodingURL));
+    public EncodingURLMapping(Type type, String encodingURL, long newid) {
+        setEncodingURL(convertToId(type, encodingURL));
         setMappingid(Long.toString(newid));
     }
 
-    public EncodingURLMapping(Type type,String encodingURL,String newid) {
-        setEncodingURL(convertToId(type,encodingURL));
+    public EncodingURLMapping(Type type, String encodingURL, String newid) {
+        setEncodingURL(convertToId(type, encodingURL));
         setMappingid(newid);
     }
 
@@ -24,16 +24,16 @@ public class EncodingURLMapping {
         THREAD, ARTICLE, ATTACHMENT
     }
 
-    public static String convertToId(Type type,String EncodingUrl) {
+    public static String convertToId(Type type, String EncodingUrl) {
         switch (type) {
         case THREAD:
-            return "1"+EncodingUrl;
+            return "1" + EncodingUrl;
         case ARTICLE:
-            return "2"+EncodingUrl;
+            return "2" + EncodingUrl;
         case ATTACHMENT:
-            return "3"+EncodingUrl;
+            return "3" + EncodingUrl;
         }
-        return "4"+EncodingUrl;
+        return "4" + EncodingUrl;
     }
 
     public String getEncodingURL() {

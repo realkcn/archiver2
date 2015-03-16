@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * Created by kcn on 14-6-17.
  */
-//@Document
+// @Document
 public class Article {
-//    @Id
+    // @Id
     private long articleid;
 
     private long boardid;
@@ -20,7 +20,7 @@ public class Article {
 
     private Date posttime;
 
-    private List<Attachment> attachments=new ArrayList<>();
+    private List<Attachment> attachments = new ArrayList<>();
 
     private String subject;
 
@@ -73,8 +73,8 @@ public class Article {
     }
 
     public void addAttachment(Attachment attachment) {
-//        if (attachments==null)
-//            setAttachments(new ArrayList<Attachment>());
+        // if (attachments==null)
+        // setAttachments(new ArrayList<Attachment>());
         attachments.add(attachment);
     }
 

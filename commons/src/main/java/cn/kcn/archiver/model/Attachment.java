@@ -3,7 +3,9 @@ package cn.kcn.archiver.model;
 //@Document
 public class Attachment {
     private String attachmentid;
+
     private String name;
+
     private long datasize;
 
     public String getAttachmentid() {

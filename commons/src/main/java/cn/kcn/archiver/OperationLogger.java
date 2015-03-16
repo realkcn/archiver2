@@ -9,8 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 
 public class OperationLogger {
-    private static final Logger LOG = LoggerFactory
-            .getLogger(OperationLogger.class);
+    private static final Logger LOG = LoggerFactory.getLogger(OperationLogger.class);
 
     public static Logger getLog() {
         return LOG;

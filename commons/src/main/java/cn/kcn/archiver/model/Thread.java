@@ -7,24 +7,32 @@ import java.util.List;
 /**
  * Created by kcn on 14-6-17.
  */
-//@Document
-//@CompoundIndexes({
-//        @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
-//})
+// @Document
+// @CompoundIndexes({
+// @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
+// })
 public class Thread {
-//    @Id
+    // @Id
     private long threadid;
+
     private long boardid;
+
     private String subject;
+
     private Date posttime;
+
     private String author;
+
     private String lastreply;
+
     private Date lastposttime;
+
     private String encodingurl;
+
     private boolean isvisible = true;
 
-//    @DBRef(lazy = true)
-    List<Article> articles=new ArrayList<>();
+    // @DBRef(lazy = true)
+    List<Article> articles = new ArrayList<>();
 
     public List<Article> getArticles() {
         return articles;

@@ -1,22 +1,20 @@
 package cn.kcn.archiver.model;
+
 /**
  * Created by kcn on 14-8-12.
  */
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Date;
 
 @SuppressWarnings("UnusedDeclaration")
-//@Document
-//@CompoundIndexes({
-////        @CompoundIndex(name = "origin_idx", def = "{'boardid':1,'originid':1}"),
-//        @CompoundIndex(name = "origin_idx", def = "{'boardid':1,'posttime':1}"),
-//        @CompoundIndex(name = "originfile_idx", def = "{'boardid':1,'filename':1}")
-//})
+// @Document
+// @CompoundIndexes({
+// // @CompoundIndex(name = "origin_idx", def = "{'boardid':1,'originid':1}"),
+// @CompoundIndex(name = "origin_idx", def = "{'boardid':1,'posttime':1}"),
+// @CompoundIndex(name = "originfile_idx", def = "{'boardid':1,'filename':1}")
+// })
 public class OriginArticleInfo<IDClass> {
-//    @Id
+    // @Id
     private IDClass articleid;
 
     private IDClass boardid;

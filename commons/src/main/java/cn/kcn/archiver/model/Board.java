@@ -4,13 +4,13 @@ package cn.kcn.archiver.model;
  * Created by kcn on 14-6-17.
  */
 
-//@Document
+// @Document
 public class Board {
 
-//    @Id
+    // @Id
     private long boardid;
 
-//    @Indexed(unique = true)
+    // @Indexed(unique = true)
     private String name;
 
     private int threads;
