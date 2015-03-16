@@ -2,13 +2,14 @@ package cn.kcn.archiver.dao;
 
 import cn.kcn.archiver.model.Article;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by kcn on 15/3/9.
  */
 
 @SuppressWarnings("UnusedDeclaration")
-//@Repository
+@Repository
 public interface ArticleDao {
     // public
     @Select("select * from article where articleid=#{articleId}")

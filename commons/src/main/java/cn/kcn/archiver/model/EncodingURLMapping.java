@@ -20,18 +20,14 @@ public class EncodingURLMapping {
         setMappingid(newid);
     }
 
-    public enum Type {
-        THREAD, ARTICLE, ATTACHMENT
-    }
-
     public static String convertToId(Type type, String EncodingUrl) {
         switch (type) {
-        case THREAD:
-            return "1" + EncodingUrl;
-        case ARTICLE:
-            return "2" + EncodingUrl;
-        case ATTACHMENT:
-            return "3" + EncodingUrl;
+            case THREAD:
+                return "1" + EncodingUrl;
+            case ARTICLE:
+                return "2" + EncodingUrl;
+            case ATTACHMENT:
+                return "3" + EncodingUrl;
         }
         return "4" + EncodingUrl;
     }
@@ -50,6 +46,10 @@ public class EncodingURLMapping {
 
     public void setMappingid(String mappingid) {
         this.mappingid = mappingid;
+    }
+
+    public enum Type {
+        THREAD, ARTICLE, ATTACHMENT
     }
 
 }

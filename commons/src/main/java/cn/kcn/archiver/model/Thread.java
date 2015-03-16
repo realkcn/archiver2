@@ -12,27 +12,18 @@ import java.util.List;
 // @CompoundIndex(name = "board_idx", def = "{'boardid':1,'lastposttime':-1}")
 // })
 public class Thread {
-    // @Id
-    private long threadid;
-
-    private long boardid;
-
-    private String subject;
-
-    private Date posttime;
-
-    private String author;
-
-    private String lastreply;
-
-    private Date lastposttime;
-
-    private String encodingurl;
-
-    private boolean isvisible = true;
-
     // @DBRef(lazy = true)
     List<Article> articles = new ArrayList<>();
+    // @Id
+    private long threadid;
+    private long boardid;
+    private String subject;
+    private Date posttime;
+    private String author;
+    private String lastreply;
+    private Date lastposttime;
+    private String encodingurl;
+    private boolean isvisible = true;
 
     public List<Article> getArticles() {
         return articles;

@@ -72,14 +72,14 @@ public class Article {
         return attachments;
     }
 
+    public void setAttachments(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
     public void addAttachment(Attachment attachment) {
         // if (attachments==null)
         // setAttachments(new ArrayList<Attachment>());
         attachments.add(attachment);
-    }
-
-    public void setAttachments(List<Attachment> attachments) {
-        this.attachments = attachments;
     }
 
     public String getSubject() {
