@@ -14,15 +14,24 @@ import java.util.List;
 public class Thread {
     // @DBRef(lazy = true)
     List<Article> articles = new ArrayList<>();
+
     // @Id
     private long threadid;
+
     private long boardid;
+
     private String subject;
+
     private Date posttime;
+
     private String author;
+
     private String lastreply;
+
     private Date lastposttime;
+
     private String encodingurl;
+
     private boolean isvisible = true;
 
     public List<Article> getArticles() {

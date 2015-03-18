@@ -2,11 +2,11 @@ package cn.kcn.archiver.model;
 
 //@Document
 public class Attachment {
-    private String attachmentid;
+    protected String attachmentid;
 
-    private String name;
+    protected String name;
 
-    private long datasize;
+    protected long datasize;
 
     public String getAttachmentid() {
         return attachmentid;

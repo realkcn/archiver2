@@ -1,0 +1,28 @@
+<configuration scan="true" scanPeriod="5 minutes">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!--数据库访问信息-->
+    <logger name="cn.kcn.archiver.dao" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <logger name="cn.kcn" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!-- jsp debug -->
+    <logger name="org.apache.jasper.compiler" level="DEBUG"/>
+
+    <root level="${loglevel}">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -6,7 +6,7 @@ package cn.kcn.archiver.model;
 
 @SuppressWarnings("UnusedDeclaration")
 public class EncodingURLMapping {
-    private String EncodingURL;
+    private String encodingURL;
 
     private String mappingid;
 
@@ -20,24 +20,25 @@ public class EncodingURLMapping {
         setMappingid(newid);
     }
 
-    public static String convertToId(Type type, String EncodingUrl) {
+    public static String convertToId(Type type, String encodingUrl) {
         switch (type) {
-            case THREAD:
-                return "1" + EncodingUrl;
-            case ARTICLE:
-                return "2" + EncodingUrl;
-            case ATTACHMENT:
-                return "3" + EncodingUrl;
+        case THREAD:
+            return "1" + encodingUrl;
+        case ARTICLE:
+            return "2" + encodingUrl;
+        case ATTACHMENT:
+            return "3" + encodingUrl;
+        default:
+            return "4" + encodingUrl;
         }
-        return "4" + EncodingUrl;
     }
 
     public String getEncodingURL() {
-        return EncodingURL;
+        return encodingURL;
     }
 
     public void setEncodingURL(String encodingURL) {
-        EncodingURL = encodingURL;
+        this.encodingURL = encodingURL;
     }
 
     public String getMappingid() {

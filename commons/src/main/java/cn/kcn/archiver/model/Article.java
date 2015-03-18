@@ -1,8 +1,6 @@
 package cn.kcn.archiver.model;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by kcn on 14-6-17.
@@ -10,23 +8,39 @@ import java.util.List;
 // @Document
 public class Article {
     // @Id
-    private long articleid;
+    protected long articleid;
 
-    private long boardid;
+    protected long boardid;
 
-    private long threadid;
+    protected long threadid;
 
-    private String author;
+    protected String author;
 
-    private Date posttime;
+    protected Date posttime;
 
-    private List<Attachment> attachments = new ArrayList<>();
+    protected String subject;
 
-    private String subject;
+    protected boolean isvisible;
 
-    private boolean isvisible;
+    protected int attachment;
 
-    private String body;
+    protected String encodingurl;
+
+    public String getEncodingurl() {
+        return encodingurl;
+    }
+
+    public void setEncodingurl(final String encodingurl) {
+        this.encodingurl = encodingurl;
+    }
+
+    public int getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(int attachment) {
+        this.attachment = attachment;
+    }
 
     public long getBoardid() {
         return boardid;
@@ -56,7 +70,7 @@ public class Article {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(final String author) {
         this.author = author;
     }
 
@@ -68,25 +82,11 @@ public class Article {
         this.posttime = posttime;
     }
 
-    public List<Attachment> getAttachments() {
-        return attachments;
-    }
-
-    public void setAttachments(List<Attachment> attachments) {
-        this.attachments = attachments;
-    }
-
-    public void addAttachment(Attachment attachment) {
-        // if (attachments==null)
-        // setAttachments(new ArrayList<Attachment>());
-        attachments.add(attachment);
-    }
-
     public String getSubject() {
         return subject;
     }
 
-    public void setSubject(String subject) {
+    public void setSubject(final String subject) {
         this.subject = subject;
     }
 
@@ -98,11 +98,4 @@ public class Article {
         this.isvisible = isvisible;
     }
 
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
 }

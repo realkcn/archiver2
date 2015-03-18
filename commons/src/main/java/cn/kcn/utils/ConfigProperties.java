@@ -1,4 +1,5 @@
-package cn.kcn;
+package cn.kcn.utils;
+
 /**
  * Created by kcn on 15/3/17.
  */
@@ -14,14 +15,16 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 public class ConfigProperties {
-    private static final Logger LOG = LoggerFactory
-            .getLogger(ConfigProperties.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ConfigProperties.class);
+
+    protected static String appName = "archiver";
 
     protected static String runningEnvironment = null;
 
     public static String getRunningEnvironment() {
-        if (null == runningEnvironment)
+        if (null == runningEnvironment) {
             return System.getenv("run-env");
+        }
         return runningEnvironment;
     }
 
@@ -29,17 +32,23 @@ public class ConfigProperties {
         ConfigProperties.runningEnvironment = runningEnvironment;
     }
 
+
+    public static String getAppName() {
+        return appName;
+    }
+
+    public static void setAppName(String appName) {
+        ConfigProperties.appName = appName;
+    }
+
     @Bean
-    public PropertyPlaceholderConfigurer properties() throws Exception {
+    public static PropertyPlaceholderConfigurer properties() throws Exception {
         if (null == getRunningEnvironment()) {
             throw new Exception("没有配置运行环境变量");
         }
         PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
-        Resource[] resources = new Resource[]
-                {
-                        new ClassPathResource("archiver.conf"),
-                        new FileSystemResource("/etc/archiver." + getRunningEnvironment() + ".conf")
-                };
+        Resource[] resources = new Resource[] {new ClassPathResource(appName + ".conf"),
+                new FileSystemResource("/etc/" + appName + "." + getRunningEnvironment() + ".conf")};
         ppc.setIgnoreUnresolvablePlaceholders(true);
         ppc.setIgnoreResourceNotFound(true);
         ppc.setLocations(resources);

@@ -8,28 +8,28 @@ package cn.kcn.archiver.model;
 public class Board {
 
     // @Id
-    private long boardid;
+    protected long boardid;
 
     // @Indexed(unique = true)
-    private String name;
+    protected String name;
 
-    private int threads;
+    protected int threads;
 
-    private int articles;
+    protected int articles;
 
-    private boolean ishidden;
+    protected boolean ishidden;
 
-    private long lastarticleid;
+    protected long lastarticleid;
 
-    private String cname;
+    protected String cname;
 
-    private String groupid;
+    protected String groupid;
 
-    private String section;
+    protected String section;
 
-    private boolean ignored;
+    protected boolean ignored;
 
-    private long lastdeleteid;
+    protected long lastdeleteid;
 
     public Board() {
 
