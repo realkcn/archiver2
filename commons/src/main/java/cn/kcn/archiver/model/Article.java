@@ -20,19 +20,7 @@ public class Article {
 
     protected String subject;
 
-    protected boolean isvisible;
-
     protected int attachment;
-
-    protected String encodingurl;
-
-    public String getEncodingurl() {
-        return encodingurl;
-    }
-
-    public void setEncodingurl(final String encodingurl) {
-        this.encodingurl = encodingurl;
-    }
 
     public int getAttachment() {
         return attachment;
@@ -89,13 +77,4 @@ public class Article {
     public void setSubject(final String subject) {
         this.subject = subject;
     }
-
-    public boolean isIsvisible() {
-        return isvisible;
-    }
-
-    public void setIsvisible(boolean isvisible) {
-        this.isvisible = isvisible;
-    }
-
 }
